@@ -1,0 +1,44 @@
+import random
+
+def Guessing_Game(a,b):
+  lives=3
+  secret= random.randint(a,b)
+  guess=int(input("Hello! This is a guessing game, you have just input two numbers in which a random number is selected between the two numbers you chose! Guess which number it is on the next line             >"))
+  if secret == guess:
+    print("Level up")
+    secret2= random.randint(a,b+5)
+    guess2= int(input("Good job! Now the range is increased by 5! Guess the new number!             >"))
+  elif lives>0:
+    print("You lost a life, but you can still go on")
+    lives=lives-1
+  else:
+    return("To live is to suffer, to survive is to find some meaning in the suffering")
+    if secret2 == guess2:
+      print("Level up")
+      secret3= random.ranint(a,b+5)
+      guess3= int(input("Good job! Now the range is increased by 5! Guess the new number!             >"))
+      if secret3 == guess3:
+        print("Level up")
+      elif lives>0:
+        print("You lost this, but you can still go on")
+        lives=lives-1
+      else:
+        return("To live is to suffer, to survive is to find some meaning in the suffering")  
+        secret4= random.ranint(a,b+5)
+        guess4= int(input("Good job! Now the range is increased by 5! Guess the new number!             >"))
+        if secret4 == guess4:
+          print("Level up")
+          secret5= random.ranint(a,b+5)
+          guess5= int(input("Good job! Now the range is increased by 5! Guess the new number!             >"))
+        elif lives>0:
+          print("To live is to suffer, to survive is to find some meaning in the suffering")
+          lives=lives-1
+        else:
+          return("Game over")  
+          if secret5 == guess5:
+              print("Congrats, either your cheating or you got really lucky to beat my game")
+          elif lives>0:
+            print("You lost a life, but maybe you can still beat this!")
+            lives=lives-1
+          else:
+            return("To live is to suffer, to survive is to find some meaning in the suffering")
